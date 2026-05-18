@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ================================================= -->
+  <!-- כותרת האתר -->
+  <!-- אפשר לשנות את השם -->
+  <!-- ================================================= -->
+
+  <title>תעלומת כדור הבדולח</title>
+
+  <style>
+
+    /* ================================================= */
+    /* עיצוב כללי של הדף */
+    /* ================================================= */
+
+    body {
+      font-family: Arial;
+      background: linear-gradient(#140022, #3b0066);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ================================================= */
+    /* עיצוב של כל שלב בסיפור */
+    /* ================================================= */
+
+    .scene {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 20px;
+      box-shadow: 0 0 15px black;
+    }
+
+    /* ================================================= */
+    /* החדר שמוצג כרגע */
+    /* ================================================= */
+
+    .active {
+      display: block;
+    }
+
+    /* ================================================= */
+    /* עיצוב כפתורים */
+    /* ================================================= */
+
+    button {
+      background: #ffd6ff;
+      border: none;
+      border-radius: 15px;
+      padding: 15px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* אפקט מעבר עכבר */
+
+    button:hover {
+      background: white;
+      transform: scale(1.05);
+    }
+
+    /* ================================================= */
+    /* אימוג'ים */
+    /* ================================================= */
+
+    .emoji {
+      font-size: 60px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================================= -->
+  <!-- פתיחה -->
+  <!-- ================================================= -->
+
+  <h1>🔮 STAR WARS JEDY FALLEN ORDER IS THE GOAT 🔮</h1>
+
+  <div id="scene1" class="scene active">
+
+    <div class="emoji">🧙</div>
+
+    <p>
+      IF U DONL LIKE IT 🩸🩸
+     
+       
+    </p>
+
+    <!-- ================================================= -->
+    <!-- 3 אפשרויות -->
+    <!-- ================================================= -->
+
+    <button onclick="showScene('scene2')">
+       U LIKE IT 😃
+    </button>
+
+    <button onclick="showScene('wrong1')">
+     U HATE IT 😤
+    </button>
+
+    <button onclick="showScene('wrong2')">
+      SAME IS THAT ONE 😒 
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- LEVEL 2-->
+  <!-- ================================================= -->
+
+  <div id="scene2" class="scene">
+
+    <div class="emoji"> 👁️‍🗨️ </div>
+
+    <p>
+WHO IS THE MAIN CHERETHER
+    </p>
+
+    <button onclick="showScene('scene3')">
+      CAL KESTIS 😎    </button>
+
+    <button onclick="showScene('wrong3')">
+      CERE 👁️‍🗨️
+    </button>
+
+    <button onclick="showScene('wrong4')">
+      DARTH VADER 
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene1')">
+    COME BACK
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!--  LEVEL 3 -->
+  <!-- ================================================= -->
+
+  <div id="scene3" class="scene">
+
+    <div class="emoji"> ??? </div>
+
+    <p>
+      
+      DID U EVEN PLAYD THE GAME
+
+    </p>
+
+    <button onclick="showScene('scene4')">
+      YEAH WHAT DID YOU THINK
+    </button>
+
+    <button onclick="showScene('wrong5')">
+    NO I DONT KNOW EVEN WHAT IS THAT
+    </button>
+
+    <button onclick="showScene('wrong6')">
+      IM CHECKING IN GOOGLE
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene2')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- שלב 4 -->
+  <!-- ================================================= -->
+
+  <div id="scene4" class="scene">
+
+    <div class="emoji">HOW MATCH GAMES </div>
+
+    <p>
+   HOW MATCH GAMES
+    </p>
+
+    <button onclick="showScene('scene5')">
+      2
+    </button>
+
+    <button onclick="showScene('wrong7')">
+      1
+    </button>
+
+    <button onclick="showScene('wrong8')">
+      ...
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene3')">
+      ⬅️ THERS NO COMING BACK
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- שלב 5 -->
+  <!-- ================================================= -->
+
+  <div id="scene5" class="scene">
+
+    <div class="emoji">DO U WANT TO PLAY</div>
+
+    <p>
+    
+    DO U WANT TO PLAY
+    </p>
+
+    <button onclick="showScene('solution')">
+      YEAH
+    </button>
+
+    <button onclick="showScene('wrong9')">
+      NO
+    </button>
+
+    <button onclick="showScene('wrong10')">
+      🥪 ...
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene4')">
+      ⬅️ THERS NO COMING BACK NAH AH
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- הפתרון -->
+  <!-- ================================================= -->
+
+  <div id="solution" class="scene">
+
+    <div class="emoji"></div>
+
+    <p>
+WELL DAN CAL KESTIS FANS GRAET JOB
+    </p>
+
+    <p>
+      ME NOW YAY
+
+      
+    </p>
+
+    <img src="a.jpg">
+
+
+    <button onclick="showScene('scene1')">
+      🔄 START OVER
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- אפשרויות לא נכונות -->
+  <!-- ================================================= -->
+
+  <div id="wrong1" class="scene">
+    <div class="emoji"> 😤 </div>
+    <p>
+      WHY BRUH
+    </p>
+
+    <button onclick="showScene('scene1')">
+      ⬅️ חזרה
+    </button>
+  </div>
+
+  <div id="wrong2" class="scene">
+    <div class="emoji"> 😒 </div>
+    <p>
+      
+      DO YOU EVEN SEE THE OTHER ONE?
+    </p>
+
+    <button onclick="showScene('scene1')">
+      ⬅️ DO YOU HATE THIS
+    </button>
+  </div>
+
+  <div id="wrong3" class="scene">
+    <div class="emoji"> 👁️‍🗨️ </div>
+    <p>
+     cere is kinda but not .
+    </p>
+
+    <button onclick="showScene('scene2')">
+     come back its not 
+    </button>
+  </div>
+
+  <div id="wrong4" class="scene">
+    <div class="emoji"></div>
+    <p>
+     .
+  u can fghit him in the game i wish for a game of him but nah ah
+    </p>
+
+    <button onclick="showScene('scene2')">
+     yeah nah ah
+    </button>
+  </div>
+
+  <div id="wrong5" class="scene">
+    <div class="emoji">☀️</div>
+    <p>
+      so chenck in google
+    </p>
+
+    <button onclick="showScene('scene3')">
+      ⬅️go for google 
+    </button>
+  </div>
+
+  <div id="wrong6" class="scene">
+    <div class="emoji"></div>
+    <p>
+      u know that is rihgt for losing that was a trick.
+    </p>
+
+    <button onclick="showScene('scene3')">
+      ⬅️ dont go to google
+    </button>
+  </div>
+
+  <div id="wrong7" class="scene">
+    <div class="emoji"></div>
+    <p>
+     NO.
+    </p>
+
+    <button onclick="showScene('scene4')">
+       NO
+    </button>
+  </div>
+
+  <div id="wrong8" class="scene">
+    <div class="emoji"></div>
+    <p>
+       ...
+      
+    </p>
+
+    <button onclick="showScene('scene4')">
+      ...
+    </button>
+  </div>
+
+  <div id="wrong9" class="scene">
+    <div class="emoji"></div>
+    <p>
+   WHY.
+    </p>
+
+    <button onclick="showScene('scene5')">
+      ⬅️ TRY GIN
+    </button>
+  </div>
+
+  <div id="wrong10" class="scene">
+    <div class="emoji">🥪</div>
+    <p>
+      
+DO U WANT A SANDWICH
+    </p>
+
+    <button onclick="showScene('scene5')">
+      🥪 CLICK FOR SANDWICH
+    </button>
+  </div>
+
+  <script>
+
+    // =================================================
+    // פונקציה שמסתירה את כל השלבים
+    // ומציגה רק את השלב שנבחר
+    // =================================================
+
+    function showScene(sceneId) {
+
+      // מוצא את כל השלבים
+      let scenes = document.querySelectorAll('.scene');
+
+      // מסתיר את כולם
+      scenes.forEach(function(scene) {
+        scene.classList.remove('active');
+      });
+
+      // מציג את השלב שנבחר
+      document.getElementById(sceneId).classList.add('active');
+    }
+
+  </script>
+
+</body>
+</html>

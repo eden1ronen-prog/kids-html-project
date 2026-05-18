@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ================================================= -->
+  <!-- כותרת האתר -->
+  <!-- ================================================= -->
+
+  <title>תעלומת כדור הבדולח</title>
+
+  <style>
+
+    /* ================================================= */
+    /* עיצוב כללי של הדף */
+    /* ================================================= */
+
+    body {
+      font-family: Arial;
+      background: linear-gradient(#140022, #3b0066);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ================================================= */
+    /* עיצוב של כל שלב בסיפור */
+    /* ================================================= */
+
+    .scene {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 20px;
+      max-width: 850px;
+      margin: auto;
+      margin-top: 20px;
+      box-shadow: 0 0 15px black;
+    }
+
+    /* ================================================= */
+    /* החדר שמוצג כרגע */
+    /* ================================================= */
+
+    .active {
+      display: block;
+    }
+
+    /* ================================================= */
+    /* עיצוב כפתורים */
+    /* ================================================= */
+
+    button {
+      background: #ffd6ff;
+      border: none;
+      border-radius: 15px;
+      padding: 15px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: white;
+      transform: scale(1.05);
+    }
+
+    /* ================================================= */
+    /* אימוג'ים */
+    /* ================================================= */
+
+    .emoji {
+      font-size: 60px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================================= -->
+  <!-- פתיחה -->
+  <!-- ================================================= -->
+
+  <h1>לשרוד את היום בבית הספר 🏫</h1>
+
+  <div id="scene1" class="scene active">
+
+    <div class="emoji">🏫</div>
+
+    <p>
+     יאללה הגיע הזמן לקום וללכת לבית הספר!
+    </p>
+
+    <p>
+      אתם גם ככה מאחרים תבחרו מה לעשות!!!
+    </p>
+
+    <button onclick="showScene('magician1')">
+עוד עשר דקות 😴
+    </button>
+
+    <button onclick="showScene('parrot1')">
+      לצאת לבית הספר
+    </button>
+
+    <button onclick="showScene('violin1')">
+   לעשות את עצמך חולה 🤧
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- מסלול העוד עשר דקות-->
+  <!-- ================================================= -->
+
+  <div id="magician1" class="scene">
+
+    <div class="emoji">😴</div>
+
+    <p>
+      אמא אומרת:
+ נראה לכם?! אתם חושבים שתאחרו לבית הספר?? לקום עכשיו!
+    </p>
+
+    <button onclick="showScene('magician2')">
+טוב בסדר אני הולך לבית הספר
+    </button>
+
+    <button onclick="showScene('wrong1')">
+להירדם גם ככה
+    </button>
+
+    <button onclick="showScene('wrong2')">
+     להתחנן
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene1')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <div id="magician2" class="scene">
+
+    <div class="emoji">😩</div>
+
+    <p>
+הגעתם באיחור של חמש דקות! ⌚
+    </p>
+
+    <button onclick="showScene('magician3')">
+    להיכנס לכיתה
+    </button>
+
+    <button onclick="showScene('wrong3')">
+      ללכת לחדר האוכל 
+    </button>
+
+    <button onclick="showScene('wrong4')">
+      להתגנב לכיתה 
+    </button>
+
+    <br>
+
+    <button onclick="showScene('magician1')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <div id="magician3" class="scene">
+
+    <div class="emoji">👩‍🏫</div>
+
+    <p>
+     המורה כועסת ואתה מתחיל ללמוד    </p>
+
+    <button onclick="showScene('solution')">
+      ללמוד כמו תמיד טוב
+    </button>
+
+    <button onclick="showScene('wrong5')">
+      לישון
+    </button>
+
+    <button onclick="showScene('wrong6')">
+      🚪 לברוח מהכיתה
+    </button>
+
+    <br>
+
+    <button onclick="showScene('magician2')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- מסלול התוכי -->
+  <!-- ================================================= -->
+
+  <div id="parrot1" class="scene">
+
+    <div class="emoji">🏫</div>
+
+    <p>
+      יפה הגעת בזמן
+    </p>
+
+    <button onclick="showScene('parrot2')">
+      ללכת לכיתה
+    </button>
+
+    <button onclick="showScene('wrong7')">
+      ללכת לחדר האוכל
+    </button>
+
+    <button onclick="showScene('wrong8')">
+להסתובב במסדרון
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene1')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <div id="parrot2" class="scene">
+
+    <div class="emoji">👩‍🏫</div>
+
+    <p>
+      אתה נכנס לכיתה בזמן!
+    </p>
+
+    <button onclick="showScene('parrot3')">
+      ללמוד רגיל
+    </button>
+
+    <button onclick="showScene('wrong9')">
+      להפריע
+    </button>
+
+    <button onclick="showScene('wrong10')">
+      לשחק בטלפון 📱
+    </button>
+
+    <br>
+
+    <button onclick="showScene('parrot1')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <div id="parrot3" class="scene">
+
+    <div class="emoji">😇</div>
+
+    <p>
+      יפה מאוד אבל מה עכשיו? יש הפסקה
+    </p>
+
+    <button onclick="showScene('solution')">
+      לצאת להפסקה
+    </button>
+
+    <button onclick="showScene('wrong11')">
+      לאכול
+    </button>
+
+    <button onclick="showScene('wrong12')">
+      💤 להירדם
+    </button>
+
+    <br>
+
+    <button onclick="showScene('parrot2')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- מסלול הכנר -->
+  <!-- ================================================= -->
+
+  <div id="violin1" class="scene">
+
+    <div class="emoji">🤧</div>
+
+    <p>
+      וואו! באמת? לשקר לאמא?! אני מאוכזב
+    </p>
+
+    <button onclick="showScene('violin2')">
+     לבקש תרופה
+    </button>
+
+    <button onclick="showScene('wrong13')">
+      🍉 לאכול אבטיח
+    </button>
+
+    <button onclick="showScene('wrong14')">
+      לראות טלוויזיה כל היום
+    </button>
+
+    <br>
+
+    <button onclick="showScene('scene1')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <div id="violin2" class="scene">
+
+    <div class="emoji">💊</div>
+
+    <p>
+      בהצלחה! אתם עכשיו קיבלתם טרופה אני מקווה שאתה גאה!
+    </p>
+
+    <button onclick="showScene('violin3')">
+      לישון
+    </button>
+
+    <button onclick="showScene('wrong15')">
+      לראות טלוויזיה
+    </button>
+
+    <button onclick="showScene('wrong16')">
+      לשחק במחשב
+    </button>
+
+    <br>
+
+    <button onclick="showScene('violin1')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <div id="violin3" class="scene">
+
+    <div class="emoji">🛌</div>
+
+    <p>
+      פספסתם יום בית ספר
+    </p>
+
+    <button onclick="showScene('solution')">
+      להשוויץ לחברים
+    </button>
+
+    <button onclick="showScene('wrong17')">
+לגלות להורים את האמת
+    </button>
+
+    <button onclick="showScene('wrong18')">
+      🍌 לאכול בננה
+    </button>
+
+    <br>
+
+    <button onclick="showScene('violin2')">
+      ⬅️ חזרה
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- הפתרון -->
+  <!-- ================================================= -->
+
+  <div id="solution" class="scene">
+
+    <div class="emoji">🏆</div>
+
+    <p>
+      כל הכבוד, הצלחתם!
+    </p>
+
+    <p>
+יאי :)
+    </p>
+
+    <p>
+      לחצו לשמיעת השיר:
+    </p>
+
+    <a href="https://www.youtube.com/results?search_query=מישל+אירוויזיון"
+       target="_blank"
+       style="color:yellow;font-size:24px;">
+       ▶️ לצפייה ביוטיוב
+    </a>
+
+    <br><br>
+
+    <button onclick="showScene('scene1')">
+      🔄 להתחיל מחדש
+    </button>
+
+  </div>
+
+  <!-- ================================================= -->
+  <!-- תשובות שגויות -->
+  <!-- ================================================= -->
+
+  <div id="wrong1" class="scene">
+    <div class="emoji">🛌</div>
+    <p>עצלנים!!!.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong2" class="scene">
+    <div class="emoji">😡</div>
+    <p>נראה לך!!.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong3" class="scene">
+    <div class="emoji">🥪</div>
+    <p>הסנדוויץ' היה מושלם. אבל תפסו אותך.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong4" class="scene">
+    <div class="emoji">😠</div>
+    <p>תפסו אותכם.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong5" class="scene">
+    <div class="emoji">😴</div>
+    <p>עצלנים.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong6" class="scene">
+    <div class="emoji">🚪</div>
+    <p>ברחתם מהכיתה אבל תפסו אותכם.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong7" class="scene">
+    <div class="emoji">🧃</div>
+    <p>לא טעים.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong8" class="scene">
+    <div class="emoji">😡</div>
+    <p>תפסו אותכם.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong9" class="scene">
+    <div class="emoji">🥸</div>
+    <p>המפתח קפא בתוך קרחון קטן.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong10" class="scene">
+    <div class="emoji">📱</div>
+    <p>הסלפי יצא מעולה. החידה פחות.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong11" class="scene">
+    <div class="emoji">🍦</div>
+    <p>גלידת חרדל הייתה רעיון גרוע.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong12" class="scene">
+    <div class="emoji">💤</div>
+    <p>נרדמתם ליד כדור הבדולח.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong13" class="scene">
+    <div class="emoji">🍉</div>
+    <p>האבטיח היה ענק במיוחד.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong14" class="scene">
+    <div class="emoji">🚲</div>
+    <p>נסעתם ישר לתוך שיח.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong15" class="scene">
+    <div class="emoji">🐟</div>
+    <p>הדגים לא ידעו שום דבר על האירוויזיון.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong16" class="scene">
+    <div class="emoji">🎲</div>
+    <p>הפסדתם במשחק הקוביות.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong17" class="scene">
+    <div class="emoji">🔇</div>
+    <p>כיביתם את הרדיו... והרמז נעלם.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <div id="wrong18" class="scene">
+    <div class="emoji">🍌</div>
+    <p>החלקתם על קליפת הבננה.</p>
+    <button onclick="showScene('scene1')">⬅️ חזרה להתחלה</button>
+  </div>
+
+  <script>
+
+    // =================================================
+    // הפונקציה מציגה רק את השלב שבחרנו
+    // =================================================
+
+    function showScene(sceneId) {
+
+      let scenes = document.querySelectorAll('.scene');
+
+      scenes.forEach(function(scene) {
+        scene.classList.remove('active');
+      });
+
+      document.getElementById(sceneId).classList.add('active');
+    }
+
+  </script>
+
+</body>
+</html>
